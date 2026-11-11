@@ -43,6 +43,7 @@ import fromUnixTime from "./filters/from-unix-time";
 import prettifyDate from "./filters/prettify-date";
 import truncate from "./filters/truncate";
 
+import pinia from "./stores";
 import router from "./router";
 import store from "./store";
 
@@ -167,6 +168,7 @@ const vuetify = createVuetify({
   }
 });
 
+app.use(pinia);
 app.use(router);
 app.use(store);
 app.use(vuetify);
